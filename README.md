@@ -23,7 +23,7 @@ Device:
 ### Instalation
 
 Three services are running in the docker. By executing `docker run ...` it will fetch those images from docker hub.
-One service (glue code) is running as systemd service. 
+One service (glue code) is running as systemd service. Smart voice assistant is made up by all these 4 services.
 
 
 1. Run Speech-to-text (SST) service in a docker. 
@@ -42,7 +42,7 @@ docker run -dit -p 59125:59125 -v "${HOME}/.local/share/mycroft/mimic3:/home/mim
 
 `docker run -dit --name classifier-ai -p 7000:7000 sigidagi/classifier-arm64`
 
-4. WakeUp Word service and 'glue code' for managing all ather services 
+4. WakeUp Word service and 'glue code' for managing all ather services. 
 
 ```
 git clone https://github.com/sigidagi/smartvoice
@@ -50,9 +50,9 @@ cd smartvoice
 ```
 
 There is settings file `nobvoice.toml` where some credentials should be added:
-a) https://console.picovoice.ai/  - accessKey for WakeUp Word detection algorithm
-b) Mqtt username and password.  
-c) optional - https://platform.openai.com/ - openAI API token
+- https://console.picovoice.ai/  - accessKey for WakeUp Word detection algorithm
+- Mqtt username and password.  
+- optional - https://platform.openai.com/ - openAI API token
 
 
 5. Run `./install.sh`
