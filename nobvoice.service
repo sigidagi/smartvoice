@@ -1,0 +1,13 @@
+[Unit]
+Description=WakeUp word 'Hello Sky' daemon
+Documentation=https://skyaalborg.io/nobvoice
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+WorkingDirectory=%h/bin/nobvoice
+ExecStart=%h/bin/nobvoice/nobvoice
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

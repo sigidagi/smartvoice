@@ -1,0 +1,36 @@
+# WakeUpWord detection AI
+[picovoice]
+access_key = ""
+keyword_path = "./ppn/hello-sky_en_raspberry-pi_v2_2_0.ppn"
+library_path = "./internal/porcupine/embedded/lib/raspberry-pi/cortex-a72-aarch64/libpv_porcupine.so"
+sensitivity = 0.4
+
+# Speech-To-Text AI
+[whisper]
+upload_url = "http://127.0.0.1:8006/upload"
+transcript_url = "http://127.0.0.1:8006/transcript/"
+
+# Classifier AI
+[spacy]
+url = "http://127.0.0.1:7000/spacy"
+
+# Text-To-Speech AI
+[mimic3]
+url = "http://127.0.0.1:59125/api/tts" 
+
+[openai]
+token = ""
+
+[sound]
+beep_path = "./sound/beep.wav"
+ok_path = "./sound/ok-dad.wav"
+output_dir = "/tmp/nobvoice/audio"
+record_duration = 4 
+
+[mqtt]
+broker = "127.0.0.1"
+port = 1883
+user = "homeassistant"
+password = ""
+device = "Kitchen-lamp"
+topic = "zigbee2mqtt/%s/set"
