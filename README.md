@@ -49,7 +49,7 @@ git clone https://github.com/sigidagi/smartvoice
 cd smartvoice
 ```
 
-There is settings file `nobvoice.toml` where some credentials should be added:
+There is settings file `nobvoice.toml` where some credentials need to be added:
 - https://console.picovoice.ai/  - accessKey for WakeUp Word detection algorithm
 - Mqtt username and password.  
 - optional - https://platform.openai.com/ - openAI API token
