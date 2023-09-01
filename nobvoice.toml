@@ -33,4 +33,4 @@ port = 1883
 user = "homeassistant"
 password = ""
 device = "Kitchen-lamp"
-topic = "zigbee2mqtt/%s/set"
+topic = "zigbee2mqtt/%s"
